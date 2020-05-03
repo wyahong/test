@@ -1,9 +1,5 @@
 package algorithm.linked;
 
-//dev_20200502 add
-
-//git test
-
 /**
  * 单链表 
  */
@@ -14,20 +10,25 @@ public class Node {
     int data;
     Node next;
 
+	//构造方法
     public Node(int data){
         this.data = data;
     }
 
     //追加节点
     public Node append(Node node){
+		//当前节点
         Node currentNode = this;
         while(true){
+			//下一个节点
             Node nextNode = currentNode.next;
             if(nextNode == null){
                 break;
             }
+			//下个节点赋给当前节点
             currentNode = nextNode;
         }
+		//追加的节点赋给当前节点的下一个
         currentNode.next = node;
         return this;
     }
