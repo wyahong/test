@@ -66,8 +66,11 @@ public class Node {
      * 3. C赋给D的下一个节点node.next = nextNext;
      */
     public void after(Node node){
+		//取出B的下一个节点C
         Node nextNext = next;
+		//D赋给B的下一个节点
         this.next = node;
+		//C赋给D的下一个节点
         node.next = nextNext;
     }
 
